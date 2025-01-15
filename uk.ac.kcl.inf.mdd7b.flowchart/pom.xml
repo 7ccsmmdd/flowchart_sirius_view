@@ -1,0 +1,49 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>uk.ac.kcl.inf.mdd7b.flowchart</groupId>
+		<artifactId>uk.ac.kcl.inf.mdd7b.flowchart.parent</artifactId>
+		<version>1.0.0-SNAPSHOT</version>
+	</parent>
+	<artifactId>uk.ac.kcl.inf.mdd7b.flowchart</artifactId>
+	<packaging>eclipse-plugin</packaging>
+	<properties>
+		<required-java-version>11</required-java-version>
+		<required-maven-version>3.6.3</required-maven-version>
+		<xtextVersion>2.31.0</xtextVersion>
+	</properties>
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.eclipse.xtend</groupId>
+				<artifactId>xtend-maven-plugin</artifactId>
+			</plugin>
+	
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-clean-plugin</artifactId>
+				<configuration>
+					<filesets combine.children="append">
+						<fileset>
+							<directory>${basedir}/../uk.ac.kcl.inf.mdd7b.flowchart/src-gen/</directory>
+							<includes>
+								<include>**/*</include>
+							</includes>
+						</fileset>
+						<fileset>
+							<directory>${basedir}/../uk.ac.kcl.inf.mdd7b.flowchart.tests/src-gen/</directory>
+							<includes>
+								<include>**/*</include>
+							</includes>
+						</fileset>
+<!-- 					<fileset>
+							<directory>${basedir}/model/generated/</directory>
+						</fileset> -->
+					</filesets>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+
+</project>

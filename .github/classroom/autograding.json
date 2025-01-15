@@ -1,0 +1,34 @@
+{
+  "tests": [
+    {
+      "name": "Basic Sirius Setup",
+      "setup": "",
+      "run": "mvn -q -B -DfailIfNoTests=false -Dtest=SiriusBaseTest verify",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 10
+    },
+    {
+      "name": "Nodes",
+      "setup": "",
+      "run": "mvn -q -B -DfailIfNoTests=false -Dtest=SiriusNodeTest verify",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 10
+    },
+    {
+      "name": "Edges",
+      "setup": "",
+      "run": "mvn -q -B -DfailIfNoTests=false -Dtest=SiriusEdgeTest verify",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 10
+    }
+  ]
+}
